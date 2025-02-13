@@ -1,11 +1,11 @@
 <?php
 
-namespace seaBuck\core;
+namespace Eventify\core;
 
-use seaBuck\controllers\pages\page404Controller;
-use seaBuck\controllers\pages\pageCategoriesController;
-use seaBuck\controllers\pages\pageHomeController;
-use seaBuck\controllers\pages\pageProduitController;
+use Eventify\controllers\pages\page404Controller;
+use Eventify\controllers\pages\pageCategoriesController;
+use Eventify\controllers\pages\pageHomeController;
+use Eventify\controllers\pages\pageProduitController;
 
 class dispatcher{
     public function dispatch($route){

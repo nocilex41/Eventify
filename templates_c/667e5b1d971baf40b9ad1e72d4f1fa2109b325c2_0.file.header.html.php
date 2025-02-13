@@ -1,6 +1,6 @@
 <?php
 /* Smarty version 4.5.5, created on 2025-02-12 10:35:01
-  from '/Applications/MAMP/htdocs/seabuck-disii/views/sections/header.html' */
+  from '/Applications/MAMP/htdocs/eventify-disii/views/sections/header.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
@@ -11,7 +11,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     '667e5b1d971baf40b9ad1e72d4f1fa2109b325c2' => 
     array (
-      0 => '/Applications/MAMP/htdocs/seabuck-disii/views/sections/header.html',
+      0 => '/Applications/MAMP/htdocs/eventify-disii/views/sections/header.html',
       1 => 1739356500,
       2 => 'file',
     ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
 ),false)) {
 function content_67ac79553d63c4_47193471 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Applications/MAMP/htdocs/seabuck-disii/smarty-4.5.5/libs/plugins/modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Applications/MAMP/htdocs/eventify-disii/smarty-4.5.5/libs/plugins/modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -71,7 +71,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Applications/MAMP/htdocs/se
     <nav class="navbar navbar-expand-lg sticky-top" id="nav">
         <div class="container-fluid">
           <a class="navbar-brand" href="./">
-            <img src="assets/imgs/logo-seabuck.svg" width="70" alt="">
+            <img src="assets/imgs/logo-eventify.svg" width="70" alt="">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

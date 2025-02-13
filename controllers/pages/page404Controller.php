@@ -1,6 +1,6 @@
 <?php
 
-namespace seaBuck\controllers\pages;
+namespace Eventify\controllers\pages;
 
 class page404Controller{
     public function index(){

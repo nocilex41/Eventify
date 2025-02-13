@@ -21,7 +21,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   ),
 ))) {
 function content_67ae04ebd1b9b3_75767421 (\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = '/Applications/MAMP/htdocs/seabuck-disii/views/sections';
+$_smarty_current_dir = '/Applications/MAMP/htdocs/eventify-disii/views/sections';
 ?> <!-- INFOS DU PRODUIT -->
  <div id="infos"  class="pb-5">
         <div class="container">

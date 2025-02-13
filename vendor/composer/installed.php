@@ -1,6 +1,6 @@
 <?php return array(
     'root' => array(
-        'name' => 'disii/seabuck',
+        'name' => 'disii/eventify',
         'pretty_version' => '1.0.0+no-version-set',
         'version' => '1.0.0.0',
         'reference' => null,
@@ -10,7 +10,7 @@
         'dev' => true,
     ),
     'versions' => array(
-        'disii/seabuck' => array(
+        'disii/eventify' => array(
             'pretty_version' => '1.0.0+no-version-set',
             'version' => '1.0.0.0',
             'reference' => null,

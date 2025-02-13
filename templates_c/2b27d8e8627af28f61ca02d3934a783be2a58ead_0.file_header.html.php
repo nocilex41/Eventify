@@ -1,15 +1,15 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-02-13 14:42:43
+/* Smarty version 5.4.3, created on 2025-02-13 15:27:19
   from 'file:views/sections/header.html' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_67ae04e3d5dc41_63028412',
+  'unifunc' => 'content_67ae0f57986673_70546309',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '8f0571247c1d3e466f962681f2f166509a5bb854' => 
+    '2b27d8e8627af28f61ca02d3934a783be2a58ead' => 
     array (
       0 => 'views/sections/header.html',
       1 => 1739356500,
@@ -20,8 +20,8 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_67ae04e3d5dc41_63028412 (\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = '/Applications/MAMP/htdocs/eventify-disii/views/sections';
+function content_67ae0f57986673_70546309 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = '/Applications/MAMP/htdocs/eventify/views/sections';
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>

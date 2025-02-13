@@ -1,8 +1,8 @@
 <?php
 
-namespace seaBuck\controllers\pages;
+namespace Eventify\controllers\pages;
 
-use seaBuck\core\tpl;
+use Eventify\core\tpl;
 
 class pageHomeController{
     public function index(){

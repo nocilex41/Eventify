@@ -1,6 +1,6 @@
 <?php
 
-use seaBuck\core\tpl;
+use Eventify\core\tpl;
 tpl::assign("copy","© 2025 - DISII");
 tpl::view("footer");
 ?>

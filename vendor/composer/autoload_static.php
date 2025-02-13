@@ -14,9 +14,9 @@ class ComposerStaticInitfabafa372a481d25421bfba07eb768fe
     public static $prefixLengthsPsr4 = array (
         's' => 
         array (
-            'seaBuck\\models\\' => 15,
-            'seaBuck\\core\\' => 13,
-            'seaBuck\\controllers\\pages\\' => 26,
+            'Eventify\\models\\' => 15,
+            'Eventify\\core\\' => 13,
+            'Eventify\\controllers\\pages\\' => 26,
         ),
         'S' => 
         array (
@@ -26,15 +26,15 @@ class ComposerStaticInitfabafa372a481d25421bfba07eb768fe
     );
 
     public static $prefixDirsPsr4 = array (
-        'seaBuck\\models\\' => 
+        'Eventify\\models\\' => 
         array (
             0 => __DIR__ . '/../..' . '/models',
         ),
-        'seaBuck\\core\\' => 
+        'Eventify\\core\\' => 
         array (
             0 => __DIR__ . '/../..' . '/core',
         ),
-        'seaBuck\\controllers\\pages\\' => 
+        'Eventify\\controllers\\pages\\' => 
         array (
             0 => __DIR__ . '/../..' . '/controllers/pages',
         ),

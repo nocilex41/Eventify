@@ -1,15 +1,15 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-02-13 14:42:43
+/* Smarty version 5.4.3, created on 2025-02-13 15:27:19
   from 'file:views/sections/footer.html' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_67ae04e3d6acb6_13228656',
+  'unifunc' => 'content_67ae0f579aca39_08379031',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'c54be90bf04e3400a823177c9bb1df4d4c4bb3ec' => 
+    '9a03f4eda8f19173c2f3b3230260948fba64edeb' => 
     array (
       0 => 'views/sections/footer.html',
       1 => 1739434320,
@@ -20,8 +20,8 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_67ae04e3d6acb6_13228656 (\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = '/Applications/MAMP/htdocs/eventify-disii/views/sections';
+function content_67ae0f579aca39_08379031 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = '/Applications/MAMP/htdocs/eventify/views/sections';
 ?>
  <!-- FOOTER-->
  <div id="footer">

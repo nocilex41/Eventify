@@ -1,7 +1,7 @@
 <?php
 
-use seaBuck\core\tpl;
-use seaBuck\models\menu;
+use Eventify\core\tpl;
+use Eventify\models\menu;
 /** V1  */
 /*
 $liens = [];

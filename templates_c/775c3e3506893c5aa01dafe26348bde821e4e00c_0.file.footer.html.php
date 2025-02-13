@@ -1,6 +1,6 @@
 <?php
 /* Smarty version 4.5.5, created on 2025-02-13 08:13:26
-  from '/Applications/MAMP/htdocs/seabuck-disii/views/sections/footer.html' */
+  from '/Applications/MAMP/htdocs/eventify-disii/views/sections/footer.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
@@ -11,7 +11,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     '775c3e3506893c5aa01dafe26348bde821e4e00c' => 
     array (
-      0 => '/Applications/MAMP/htdocs/seabuck-disii/views/sections/footer.html',
+      0 => '/Applications/MAMP/htdocs/eventify-disii/views/sections/footer.html',
       1 => 1739434320,
       2 => 'file',
     ),
@@ -28,7 +28,7 @@ function content_67ada9a6bd6a19_27229562 (Smarty_Internal_Template $_smarty_tpl)
     <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
       <div class="col mb-3">
         <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-          <img src="assets/imgs/logo-seabuck.svg" width="100px" alt="">
+          <img src="assets/imgs/logo-eventify.svg" width="100px" alt="">
         </a>
         <p class="text-body-secondary"><?php echo $_smarty_tpl->tpl_vars['copy']->value;?>
  <?php echo $_smarty_tpl->tpl_vars['title']->value;?>

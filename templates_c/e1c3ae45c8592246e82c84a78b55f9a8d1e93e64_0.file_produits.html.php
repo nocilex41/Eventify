@@ -1,15 +1,15 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-02-13 14:42:49
+/* Smarty version 5.4.3, created on 2025-02-13 15:27:19
   from 'file:views/sections/produits.html' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_67ae04e9229826_09865026',
+  'unifunc' => 'content_67ae0f579a8b53_58609045',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '2bf65f22ea460e1df7acdbb1548edeb24e9912e4' => 
+    'e1c3ae45c8592246e82c84a78b55f9a8d1e93e64' => 
     array (
       0 => 'views/sections/produits.html',
       1 => 1739364183,
@@ -20,8 +20,8 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_67ae04e9229826_09865026 (\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = '/Applications/MAMP/htdocs/eventify-disii/views/sections';
+function content_67ae0f579a8b53_58609045 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = '/Applications/MAMP/htdocs/eventify/views/sections';
 ?><!--  produits diaporama-->
 <div class="your-class">
     <?php

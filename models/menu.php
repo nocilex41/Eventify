@@ -1,8 +1,8 @@
 <?php
 
-namespace seaBuck\models;
+namespace Eventify\models;
 
-use seaBuck\core\table;
+use Eventify\core\table;
 
 class menu extends table{
 

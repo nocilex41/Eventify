@@ -1,10 +1,10 @@
 <?php
 
-namespace seaBuck\models;
+namespace Eventify\models;
 
-use seaBuck\core\app;
-use seaBuck\core\table;
-use seaBuck\core\tools;
+use Eventify\core\app;
+use Eventify\core\table;
+use Eventify\core\tools;
 
 class lien extends table{
    

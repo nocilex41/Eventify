@@ -1,6 +1,6 @@
 <?php
 /* Smarty version 4.5.5, created on 2025-02-12 13:54:41
-  from '/Applications/MAMP/htdocs/seabuck-disii/views/sections/intro_produit.html' */
+  from '/Applications/MAMP/htdocs/eventify-disii/views/sections/intro_produit.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
@@ -11,7 +11,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     '089c5fbfbfc7e9b03e8053c09b211c71bf2adb46' => 
     array (
-      0 => '/Applications/MAMP/htdocs/seabuck-disii/views/sections/intro_produit.html',
+      0 => '/Applications/MAMP/htdocs/eventify-disii/views/sections/intro_produit.html',
       1 => 1739367062,
       2 => 'file',
     ),

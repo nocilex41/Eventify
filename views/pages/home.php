@@ -1,10 +1,8 @@
 <?php
 
-use seaBuck\core\app;
+use Eventify\core\app;
 
 app::section("header");
-app::section("intro");
-app::section("produits");
 app::section("footer");
 
 ?>

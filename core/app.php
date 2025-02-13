@@ -1,6 +1,6 @@
 <?php
 
-namespace seaBuck\core;
+namespace Eventify\core;
 
 class app{
 
@@ -15,8 +15,8 @@ class app{
     public static $dispatcher;
 
     public static function DB(){
-        self::$db = database::getInstance("localhost","seabuck","root","root");
-       //self::$db = new database("localhost","seabuck","root","root");
+        self::$db = database::getInstance("localhost","eventify","root","root");
+       //self::$db = new database("localhost","eventify","root","root");
     }
 
 public static function section($section){
@@ -51,9 +51,9 @@ public static function section($section){
 public static function page(){
 
     self::$rooter = new rooter();
-    self::$rooter->addRoute("","seaBuck\\controllers\\pages\\pageHomeController@index");
-    self::$rooter->addRoute("produit","seaBuck\\controllers\\pages\\pageProduitController@index");
-    self::$rooter->addRoute("categories","seaBuck\\controllers\\pages\\pageCategoriesController@index");
+    self::$rooter->addRoute("","Eventify\\controllers\\pages\\pageHomeController@index");
+    self::$rooter->addRoute("produit","Eventify\\controllers\\pages\\pageProduitController@index");
+    self::$rooter->addRoute("categories","Eventify\\controllers\\pages\\pageCategoriesController@index");
     $p = tools::get("p");
     $route =  self::$rooter->getRoute($p);
     self::$dispatcher = new dispatcher();

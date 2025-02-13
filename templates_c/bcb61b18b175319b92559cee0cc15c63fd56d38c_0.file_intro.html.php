@@ -21,7 +21,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   ),
 ))) {
 function content_67ae04e3d66099_58931591 (\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = '/Applications/MAMP/htdocs/seabuck-disii/views/sections';
+$_smarty_current_dir = '/Applications/MAMP/htdocs/eventify-disii/views/sections';
 ?><!-- INTRO-->
 <div id="intro">
         <div class="container">

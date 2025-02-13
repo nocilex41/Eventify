@@ -1,6 +1,6 @@
 <?php
 
-namespace seaBuck\core;
+namespace Eventify\core;
 
 class autoloader{
 

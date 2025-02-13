@@ -1,6 +1,6 @@
 <?php
 /* Smarty version 4.5.5, created on 2025-02-12 13:26:34
-  from '/Applications/MAMP/htdocs/seabuck-disii/views/sections/intro_categorie.html' */
+  from '/Applications/MAMP/htdocs/eventify-disii/views/sections/intro_categorie.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
@@ -11,7 +11,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     '61b05ae696d21bc9d852b1e3ee8f420113c289a6' => 
     array (
-      0 => '/Applications/MAMP/htdocs/seabuck-disii/views/sections/intro_categorie.html',
+      0 => '/Applications/MAMP/htdocs/eventify-disii/views/sections/intro_categorie.html',
       1 => 1739366787,
       2 => 'file',
     ),

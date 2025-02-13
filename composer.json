@@ -1,10 +1,10 @@
 {
-    "name": "disii/seabuck",
+    "name": "disii/eventify",
     "autoload": {
         "psr-4": {
-            "seaBuck\\models\\": "models/",
-            "seaBuck\\core\\": "core/",
-            "seaBuck\\controllers\\pages\\": "controllers/pages/"
+            "Eventify\\models\\": "models/",
+            "Eventify\\core\\": "core/",
+            "Eventify\\controllers\\pages\\": "controllers/pages/"
         }
     },
     "authors": [
