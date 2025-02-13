@@ -1,0 +1,32 @@
+
+<!--- catégories -->
+<div class="categories">
+    <div class="container">
+      <div class="row">
+
+        {foreach from=$categories item=cat}
+        <div class="categorie col-md-3">
+            <div class="row">
+              <img src="assets/imgs/{$cat->image->url}" class="imgProduct" alt="">
+              <h2>{$cat->nom}</h2>
+              <p>{$cat->desc}</p>
+              <a href="?p=categories&id={$cat->id}" class="btn btn-light rounded-pill col-md-12">Voir</a>
+            </div>
+        </div>
+        {/foreach}
+        <!--
+        <div class="categorie col-md-3">
+          <div class="row">
+            <img src="assets/imgs/donut.png" class="imgProduct" alt="">
+            <h2>Cakes</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#" class="btn btn-light rounded-pill col-md-12">Voir</a>
+          </div>
+      </div>
+        -->
+      </div>
+    </div>
+   
+  </div>
+
+<!--- FIN catégories -->

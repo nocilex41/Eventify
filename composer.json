@@ -1,0 +1,19 @@
+{
+    "name": "disii/seabuck",
+    "autoload": {
+        "psr-4": {
+            "seaBuck\\models\\": "models/",
+            "seaBuck\\core\\": "core/",
+            "seaBuck\\controllers\\pages\\": "controllers/pages/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alexis",
+            "email": "nocilex41@gmail.com"
+        }
+    ],
+    "require": {
+        "smarty/smarty": "^5.4"
+    }
+}
