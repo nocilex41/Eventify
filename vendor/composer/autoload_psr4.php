@@ -6,9 +6,9 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'Smarty\\' => array($vendorDir . '/smarty/smarty/src'),
     'Eventify\\models\\' => array($baseDir . '/models'),
     'Eventify\\core\\' => array($baseDir . '/core'),
     'Eventify\\controllers\\pages\\' => array($baseDir . '/controllers/pages'),
-    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
-    'Smarty\\' => array($vendorDir . '/smarty/smarty/src'),
 );

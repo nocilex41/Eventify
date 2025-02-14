@@ -10,30 +10,23 @@ class menu extends table{
     protected static $key = "id_menu"; // a faire à chaque model
 
     private $id_menu;
-    private $nom_menu;
+    private $name_menu;
     private $position_menu;
 
-    private $liens=[];
+    private $links=[];
 
 
 public function __construct(){
     $conditions=[
         [
-            "champ"=>"id_menu_lien",
+            "champ"=>"id_menu_link",
             "op"=> "=",
             "valeur" => $this->id_menu
         ]
         ];
-    $this->liens = lien::specifique($conditions);
+    $this->links = link::specifique($conditions);
 }
-/*
-     // Constructor
-     public function __construct($id_menu, $nom_menu, $position_menu) {
-        $this->id_menu = $id_menu;
-        $this->nom_menu = $nom_menu;
-        $this->position_menu = $position_menu;
-    }
-*/
+
 
     /**
      * Get the value of id_menu
@@ -56,21 +49,21 @@ public function __construct(){
     }
 
     /**
-     * Get the value of nom_menu
+     * Get the value of name_menu
      */ 
-    public function getNom_menu()
+    public function getName_menu()
     {
-        return $this->nom_menu;
+        return $this->name_menu;
     }
 
     /**
-     * Set the value of nom_menu
+     * Set the value of name_menu
      *
      * @return  self
      */ 
-    public function setNom_menu($nom_menu)
+    public function setName_menu($name_menu)
     {
-        $this->nom_menu = $nom_menu;
+        $this->name_menu = $name_menu;
 
         return $this;
     }
@@ -98,11 +91,11 @@ public function __construct(){
 
 
     /**
-     * Get the value of liens
+     * Get the value of links
      */ 
-    public function getLiens_menu()
+    public function getLinks_menu()
     {
-        return $this->liens;
+        return $this->links;
     }
 
 }
