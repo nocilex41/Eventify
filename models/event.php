@@ -5,6 +5,7 @@ namespace Eventify\models;
 use Eventify\core\app;
 use Eventify\core\table;
 use Eventify\core\tools;
+use Eventify\models\category;
 
 class event extends table{
    
