@@ -19,7 +19,7 @@ class link extends table{
     private $id_menu_link;
    
 
-    public function afficherLink(){
+    public function displayLink(){
        
         if(app::$rw){
             return $this->url_rw;

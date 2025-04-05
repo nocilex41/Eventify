@@ -23,3 +23,33 @@ $(document).ready(function() {
         }
     });
 });
+
+$(document).ready(function () {
+    $("#login-form").submit(function (e) {
+        e.preventDefault();
+        $.post("core/auth.php", {
+            action: "login",
+            email: $("#login-email").val(),
+            password: $("#login-password").val()
+        }, function (response) {
+            alert(response.message);
+            if (response.success) {
+                window.location.href = "?p=home";
+            }
+        }, "json");
+    });
+
+    $("#register-form").submit(function (e) {
+        e.preventDefault();
+        $.post("core/auth.php", {
+            action: "register",
+            email: $("#register-email").val(),
+            password: $("#register-password").val()
+        }, function (response) {
+            alert(response.message);
+            if (response.success) {
+                window.location.href = "?p=login";
+            }
+        }, "json");
+    });
+});

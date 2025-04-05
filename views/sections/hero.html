@@ -1,0 +1,153 @@
+<div id="dynamic-header" class="flex flex-col md:flex-row w-full relative bg-gray-900 overflow-hidden h-[28rem] md:h-[32rem] lg:h-[40rem]">
+    {* Conteneur principal qui prend toute la largeur sur mobile *}
+    <div class="flex flex-col justify-center w-full md:w-1/2 z-10 text-white relative h-full" style="background-color: #1a1a1a;">
+        {* Images d'arrière-plan pour mobile - maintenant directement dans le conteneur principal *}
+        {foreach from=$headerEvents item=event name=headerLoop}
+            <div class="absolute inset-0 bg-cover bg-center md:hidden {if $smarty.foreach.headerLoop.first}active{else}hidden{/if} header-mobile-bg" 
+                 style="background-image: url('../eventify/assets/imgs/{$event->img_header}');">
+                {* Overlay sombre pour améliorer la lisibilité du texte *}
+                <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            </div>
+        {/foreach}
+
+        {* Contenu texte avec padding *}
+        <div class="button-container relative z-10 h-full flex flex-col justify-center px-6 py-8">
+            {foreach from=$headerEvents item=event name=headerLoop}
+                <div class="header-content w-full {if $smarty.foreach.headerLoop.first}active{else}hidden{/if}" data-id="{$event->id}">
+                    <p class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{$event->title}</p>
+                    <p class="text-sm md:text-base mb-6 opacity-90">{$event->desc}</p>
+                    <button class="view-event-btn inline-flex items-center justify-center px-5 py-3 text-base font-medium text-gray-900 rounded-full bg-amber-200 hover:bg-amber-300 transition-colors duration-300 w-max" 
+                            data-id="{$event->id}">
+                        Voir l'event
+                    </button>
+                </div>
+            {/foreach}
+        </div>
+
+        {* Indicateurs de navigation *}
+        <div class="header-indicators flex justify-center space-x-2 absolute bottom-6 left-0 right-0 z-20">
+            {foreach from=$headerEvents item=event name=indicatorLoop}
+                <span class="indicator w-2 h-2 rounded-full bg-gray-500 cursor-pointer transition-colors {if $smarty.foreach.indicatorLoop.first}bg-amber-200{/if}" 
+                      data-slide="{$smarty.foreach.indicatorLoop.index}"></span>
+            {/foreach}
+        </div>
+    </div>
+
+    {* Partie droite avec l'image (visible uniquement sur desktop) *}
+    <div class="hidden md:block md:w-1/2 relative h-full">
+        {* Images en arrière-plan pour desktop *}
+        {foreach from=$headerEvents item=event name=headerLoop}
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat {if $smarty.foreach.headerLoop.first}active{else}hidden{/if} header-desktop-bg" 
+                 style="background-image: url('../eventify/assets/imgs/{$event->img_header}');">
+            </div>
+        {/foreach}
+        {* Dégradé pour la transition par-dessus l'image *}
+        <div class="absolute top-0 left-0 h-full w-24 z-10" style="background: linear-gradient(to right, #1a1a1a, transparent);"></div>
+    </div>    
+</div>
+
+<style>
+    /* Utilisation de display: none/block au lieu de opacity */
+    .header-content.active,
+    .header-mobile-bg.active,
+    .header-desktop-bg.active {
+        display: block;
+    }
+
+    /* Assurer que le texte est lisible sur l'image de fond en mobile */
+    @media (max-width: 768px) {
+        .button-container {
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .button-container p {
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+    }
+</style>
+
+<script>
+$(document).ready(function() {
+    // Configuration
+    var changeInterval = 5000; // Changer toutes les 5 secondes
+    var $contents = $('.header-content');
+    var $mobileBackgrounds = $('.header-mobile-bg');
+    var $desktopBackgrounds = $('.header-desktop-bg');
+    var $indicators = $('.indicator');
+    var totalSlides = $contents.length;
+    var currentSlide = 0;
+    var slideInterval;
+    var isAnimating = false;
+
+    // Fonction pour changer de slide avec transition
+    function changeSlide(newIndex) {
+        if (isAnimating || currentSlide === newIndex) return;
+        isAnimating = true;
+
+        // Mettre à jour les indicateurs immédiatement
+        $indicators.removeClass('bg-amber-200').addClass('bg-gray-500');
+        $indicators.eq(newIndex).removeClass('bg-gray-500').addClass('bg-amber-200');
+
+        // Cacher l'élément actuel
+        $contents.eq(currentSlide).fadeOut(400, function() {
+            $(this).removeClass('active').addClass('hidden');
+        });
+        $mobileBackgrounds.eq(currentSlide).fadeOut(400, function() {
+            $(this).removeClass('active').addClass('hidden');
+        });
+        $desktopBackgrounds.eq(currentSlide).fadeOut(400, function() {
+            $(this).removeClass('active').addClass('hidden');
+        });
+
+        // Afficher le nouvel élément après un court délai
+        setTimeout(function() {
+            $contents.eq(newIndex).fadeIn(400).removeClass('hidden').addClass('active');
+            $mobileBackgrounds.eq(newIndex).fadeIn(400).removeClass('hidden').addClass('active');
+            $desktopBackgrounds.eq(newIndex).fadeIn(400).removeClass('hidden').addClass('active');
+
+            // S'assurer que l'animation est terminée
+            setTimeout(function() {
+                isAnimating = false;
+                currentSlide = newIndex;
+            }, 500);
+        }, 300);
+    }
+
+    // Démarrer le défilement automatique
+    function startSlideshow() {
+        slideInterval = setInterval(function() {
+            if (!isAnimating) {
+                var nextSlide = (currentSlide + 1) % totalSlides;
+                changeSlide(nextSlide);
+            }
+        }, changeInterval);
+    }
+
+    // Arrêter le défilement automatique
+    function stopSlideshow() {
+        clearInterval(slideInterval);
+    }
+
+    // Clic sur un indicateur
+    $indicators.on('click', function() {
+        if (!isAnimating) {
+            var newIndex = $(this).data('slide');
+            stopSlideshow();
+            changeSlide(newIndex);
+            startSlideshow();
+        }
+    });
+
+    // Clic sur le bouton "Voir l'event"
+    $('.view-event-btn').on('click', function() {
+        var eventId = $(this).data('id');
+        // Rediriger vers la page de l'événement
+        window.location.href = 'event_details.php?id=' + eventId;
+    });
+
+    // Démarrer le diaporama
+    if(totalSlides > 1) {
+        startSlideshow();
+    }
+});
+</script>

@@ -11,7 +11,7 @@ class table{
     }
 
     // toutes les fx liées à la base
-    public static function tous(){
+    public static function findAll(){
         $class = get_called_class(); 
         if(strripos($class,"\\")){
             $table = substr($class,strripos($class,"\\")+1);
@@ -59,6 +59,14 @@ class table{
         ]
         ];
     return $class::onlyOne($conditions);
+
+ }
+
+ public static function byPopularityAndDate(){
+    $class = get_called_class();
+    $sql = "SELECT e.* FROM event e INNER JOIN event_date ed ON e.id_event = ed.id_event_ed WHERE ed.date_ed >= CURRENT_DATE() GROUP BY e.id_event ORDER BY e.popularity_event DESC LIMIT 5;";
+
+    return app::$db->query($sql,$class);
 
  }
 
