@@ -53,3 +53,44 @@ $(document).ready(function () {
         }, "json");
     });
 });
+
+
+$(document).ready(function () {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        function (position) {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+          console.log(latitude);
+          console.log(longitude);
+
+          // Envoi des coordonnées au serveur via AJAX
+        //   $.ajax({
+        //     url: 'handle-location.php',
+        //     method: 'GET',
+        //     data: {
+        //       lat: latitude,
+        //       lon: longitude,
+        //     },
+        //     success: function (response) {
+        //       // Affichage des événements retournés par le serveur
+        //       const events = JSON.parse(response);
+        //       let eventsList = '';
+        //       events.forEach(event => {
+        //         eventsList += `<li>${event.name} - ${event.distance.toFixed(2)} km</li>`;
+        //       });
+        //       $('#events').html(eventsList);
+        //     },
+        //     error: function () {
+        //       alert('Impossible de récupérer les événements.');
+        //     },
+        //   });
+        },
+        function (error) {
+          alert('Erreur lors de la géolocalisation : ' + error.message);
+        }
+      );
+    } else {
+      alert('La géolocalisation n’est pas supportée par votre navigateur.');
+    }
+  });
