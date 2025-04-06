@@ -5,6 +5,7 @@ namespace Eventify\core;
 use Eventify\controllers\pages\page404Controller;
 use Eventify\controllers\pages\pageCategoriesController;
 use Eventify\controllers\pages\pageHomeController;
+use Eventify\controllers\pages\admin\pageAdminHomeController;
 use Eventify\controllers\pages\pageProduitController;
 
 class dispatcher{

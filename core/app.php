@@ -47,6 +47,20 @@ class app{
         }
     }
 
+    public static function sectionAdmin($section){
+        switch($section){
+            case "header" :
+                require("controllers/sections/admin/header.php");
+            break;
+            case "menu" :
+                require("controllers/sections/admin/menu.php");
+            break;
+            case "footer" :
+                require("controllers/sections/admin/footer.php");
+            break;
+        }
+    }
+
     public static function page(){
 
         self::$rooter = new rooter();
@@ -55,6 +69,7 @@ class app{
         self::$rooter->addRoute("evenement","Eventify\\controllers\\pages\\pageEventController@index");
         self::$rooter->addRoute("register","Eventify\\controllers\\pages\\pageRegisterController@index");
         self::$rooter->addRoute("categories","Eventify\\controllers\\pages\\pageCategoriesController@index");
+        self::$rooter->addRoute("admin","Eventify\\controllers\\pages\\admin\\pageAdminHomeController@index");
         $p = tools::get("p");
         $route =  self::$rooter->getRoute($p);
         self::$dispatcher = new dispatcher();
