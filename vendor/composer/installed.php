@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'disii/eventify',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'b2906ca73198039687ce0b3e51d8783ce2d2c830',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'disii/eventify' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'b2906ca73198039687ce0b3e51d8783ce2d2c830',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
