@@ -38,6 +38,13 @@ class tpl{
         self::$template->display("views/sections/$view.html");
     }
 
+    //dislayAdmin
+    public static function viewAdmin($view)
+    {
+        self::init();
+        self::$template->display("views/sections/admin/$view.html");
+    }
+
     public static function is_set($var)
     {
         self::init();
