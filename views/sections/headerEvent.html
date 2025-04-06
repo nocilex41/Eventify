@@ -1,0 +1,46 @@
+<div class="container mx-auto py-8 px-4">
+    <h1 class="text-2xl font-semibold">
+        {$event->title}
+      </h1>
+    <!-- Conteneur de la galerie -->
+    <div class="grid grid-cols-3 gap-2">
+      <!-- Grande image à gauche -->
+      <div class="col-span-2">
+        <img
+          src='./assets/imgs/{$event->img_header}'
+          alt="Image principale"
+          class="w-full h-full object-cover rounded-lg"
+        />
+      </div>
+  
+      <!-- Conteneur des petites images à droite -->
+      <div class="grid grid-rows-2 grid-cols-2 gap-2">
+        <!-- Petite image 1 -->
+        <img
+          src="./assets/imgs/photo1.avif"
+          alt="Image secondaire 1"
+          class="w-full h-full object-cover rounded-lg"
+        />
+        <!-- Petite image 2 -->
+        <img
+          src="./assets/imgs/photo2.avif"
+          alt="Image secondaire 2"
+          class="w-full h-full object-cover rounded-lg"
+        />
+        <!-- Petite image 3 -->
+        <img
+          src="./assets/imgs/photo3.avif"
+          alt="Image secondaire 3"
+          class="w-full h-full object-cover rounded-lg"
+        />
+        <!-- Dernière image avec le bouton -->
+        <div class="relative">
+          <img
+            src="./assets/imgs/photo4.avif"
+            alt="Image secondaire 4"
+            class="w-full h-full object-cover rounded-lg"
+          />
+      </div>
+    </div>
+  </div>
+  

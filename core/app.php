@@ -38,6 +38,9 @@ class app{
             case "sliderHome" :
                 require("controllers/sections/sliderHome.php");
             break;
+            case "headerEvent" :
+                require("controllers/sections/headerEvent.php");
+            break;
             case "register" :
                 require("controllers/sections/register.php");
             break;
@@ -49,6 +52,7 @@ class app{
         self::$rooter = new rooter();
         self::$rooter->addRoute("","Eventify\\controllers\\pages\\pageHomeController@index");
         self::$rooter->addRoute("login","Eventify\\controllers\\pages\\pageLoginController@index");
+        self::$rooter->addRoute("evenement","Eventify\\controllers\\pages\\pageEventController@index");
         self::$rooter->addRoute("register","Eventify\\controllers\\pages\\pageRegisterController@index");
         self::$rooter->addRoute("categories","Eventify\\controllers\\pages\\pageCategoriesController@index");
         $p = tools::get("p");
